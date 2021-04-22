@@ -1,0 +1,2 @@
+# Nicehash Stat Display
+ 
