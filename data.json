@@ -1,0 +1,39 @@
+{
+    "unpaidAmount": "0.00000432",
+    "devices": [
+        {
+            "id": "0",
+            "name": "GeForce RTX 2060",
+            "deviceType": {
+                "enumName": "NVIDIA",
+                "description": "Nvidia"
+            },
+            "status": {
+                "enumName": "MINING",
+                "description": "Mining"
+            },
+            "temperature": 4456500.0,
+            "load": 5242979.0,
+            "revolutionsPerMinute": 1733.0,
+            "revolutionsPerMinutePercentage": 56.0,
+            "powerMode": {
+                "enumName": "UNKNOWN",
+                "description": "Unknown"
+            },
+            "powerUsage": 74.0,
+            "speeds": [
+                {
+                    "algorithm": "DAGGERHASHIMOTO",
+                    "title": "DaggerHashimoto",
+                    "speed": "31.24",
+                    "displaySuffix": "MH"
+                }
+            ],
+            "intensity": {
+                "enumName": "LOW",
+                "description": "Low power mode"
+            },
+            "nhqm": "V=1;CCC=1020;CVC=668;CCM=1020;MCC=7801;MCS=6801;MCD=1000;MT=196;PLW=170;HWF=20;KTUMED=42920;OP=3;OPA=High:3,Medium:2,Lite:1;"
+        }
+    ]
+}
