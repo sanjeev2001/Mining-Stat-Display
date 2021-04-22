@@ -16,6 +16,7 @@ LiquidCrystal lcd(7, 8, 9, 10, 11, 12);
 //const char* devices_1_speeds_0_speed = devices_1_speeds_0["speed"];
 //const char* unpaidAmount = root["unpaidAmount"]; // "0.00000958"
 String readString;
+String unpaid;
 
 void setup()
 {
@@ -25,13 +26,23 @@ void setup()
 
   Serial.begin(9600);
   lcd.print("Hashrate: ");
+  lcd.setCursor(0, 1);
+  lcd.print("Unpaid: ");
+}
+
+void write(String s) {
+  if (Serial.available() > 0)
+    {
+      char c = Serial.read(); //gets one byte from serial buffer
+      
+      s += c;        //makes the string readString
+    } 
 }
 
 void loop()
 {
   // set the cursor to column 0, line 1
   // (note: line 1 is the second row, since counting begins with 0):
-  lcd.setCursor(10, 0);
   // print the number of seconds since reset:
   //  lcd.print(millis() / 1000);
   while (Serial.available()) // this will be skipped if no data present, leading to
@@ -41,11 +52,20 @@ void loop()
     if (Serial.available() > 0)
     {
       char c = Serial.read(); //gets one byte from serial buffer
+      
       readString += c;        //makes the string readString
-    }
+      if(readString.length() == 5 && c != '0') {
+        lcd.setCursor(10, 0);
+        lcd.print(readString);
+        readString = "";
+      } else if (readString.length() == 9) {
+        lcd.setCursor(7, 1);
+        lcd.print(readString);
+        readString = "";
+      }
+    } 
+    delay(30);
     
   }
-  lcd.print(readString);
-  readString = "";
-  lcd.setCursor(9, 0);
+  
 }
