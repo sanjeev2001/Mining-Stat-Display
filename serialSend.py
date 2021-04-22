@@ -14,8 +14,8 @@ while(True):
 
   speed = data['devices'][0]['speeds'][0]['speed']
   print(speed)
-  # Serial write section
+  
   ser.flush()
   ser.write(str(speed + " ").encode('ascii'))
-  time.sleep(4) # I shortened this to match the new value in your Arduino code
+  time.sleep(4) 
 exit()
