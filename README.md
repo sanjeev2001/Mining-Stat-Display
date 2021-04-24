@@ -11,6 +11,9 @@ First the app.py file is run and it performs a GET request to the Nicehash API. 
   <img src="/Demo images/2.png" width="400" /> 
 </p>
 
+## Dependancies
+ - [pySerial](https://pyserial.readthedocs.io/en/latest/pyserial.html)
+
 ## How to run it yourself
  1. Pull the repository
  2. Create a file called SECRET.py in the root that contains the following information
