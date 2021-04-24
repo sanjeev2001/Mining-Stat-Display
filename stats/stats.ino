@@ -26,13 +26,13 @@ void loop()
       char c = Serial.read(); 
 
       readString += c;
-      if (readString.length() == 5 && ((isdigit(c) && c!='0') || c == ' '))
+      if (readString.length() == 5 && ((isdigit(c) && c!='0') || c == ' ')) //Once the speed is fully sent over serial it prints onto the first line
       {
         lcd.setCursor(10, 0);
         lcd.print(readString);
         readString = "";
       }
-      else if (readString.length() == 9 && (readString.charAt(8) == '1' || readString.charAt(8) == '2' || readString.charAt(8) == '3' || readString.charAt(8) == '4' || readString.charAt(8) == '5' || readString.charAt(8) == '6' || readString.charAt(8) == '7' || readString.charAt(8) == '8' || readString.charAt(8) == '9' || readString.charAt(8) == ' '))
+      else if (readString.length() == 9 && ((isdigit(c) && c!='0') || c == ' ')) //Once the unpaid is fully sent over serial it prints onto the second line
       {
         lcd.setCursor(7, 1);
         lcd.print(readString);
