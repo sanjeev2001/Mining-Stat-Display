@@ -1,5 +1,5 @@
 {
-    "unpaidAmount": "0.00000247",
+    "unpaidAmount": "0.00001182",
     "devices": [
         {
             "id": "0",
@@ -13,19 +13,19 @@
                 "description": "Mining"
             },
             "temperature": 4456500.0,
-            "load": 5767268.0,
-            "revolutionsPerMinute": 1987.0,
-            "revolutionsPerMinutePercentage": 64.0,
+            "load": 5505124.0,
+            "revolutionsPerMinute": 2167.0,
+            "revolutionsPerMinutePercentage": 70.0,
             "powerMode": {
                 "enumName": "UNKNOWN",
                 "description": "Unknown"
             },
-            "powerUsage": 75.0,
+            "powerUsage": 74.0,
             "speeds": [
                 {
                     "algorithm": "DAGGERHASHIMOTO",
                     "title": "DaggerHashimoto",
-                    "speed": "31.68",
+                    "speed": "30.56",
                     "displaySuffix": "MH"
                 }
             ],
@@ -33,7 +33,7 @@
                 "enumName": "LOW",
                 "description": "Low power mode"
             },
-            "nhqm": "V=1;CCC=1020;CVC=668;CCM=1020;MCC=7801;MCS=6801;MCD=1000;MT=196;PLW=170;HWF=21;KTUMED=34070;OP=3;OPA=High:3,Medium:2,Lite:1;"
+            "nhqm": "V=1;CCC=1020;CVC=668;CCM=1020;MCC=7801;MCS=6801;MCD=1000;MT=196;PLW=170;KTUMED=35955;OP=3;OPA=High:3,Medium:2,Lite:1;"
         }
     ]
 }
