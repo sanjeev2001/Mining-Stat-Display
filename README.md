@@ -4,7 +4,7 @@
 This project lets you display your Nicehash mining statistics on a 16x2 LCD Display with an Arduino and the Nicehash API.
 
 ## How it works
-First the app.py file is run and it performs a GET request to the Nicehash API. This creates a json file that contains some information about your mining rig. Then the serialSend.py file takes the data from this json and parses it such that it obtains the hashrate of your rig and the current unpaid amount. It sends these values to the connected Arduino over the serial com port where the stats.ino file takes the values byte by byte and displays it onto the LCD.
+First the app.py file is run and it performs a GET request to the Nicehash API. This creates a json file that contains some information about your mining rig. Then the data from this json and is parsed such that it obtains the hashrate of your rig and the current unpaid amount. It sends these values to the connected Arduino over the serial com port where the stats.ino file takes the values byte by byte and displays it onto the LCD.
 
 <p float="left" align="center">
   <img src="/Demo images/1.png" width="400" />
@@ -22,9 +22,9 @@ First the app.py file is run and it performs a GET request to the Nicehash API. 
 		organisation_id = 'Your organisation ID'
 		key = 'Your API key'
 		secret = 'Your secret key'
- 3. In `serialSend.py` change the COM port in the `ser` variable if it is not COM3 already
+ 3. In `app.py` change the COM port in the `ser` variable if it is not COM3 already
  4. Upload the code to your Arduino
- 5. Run `app.py` and `serialSend.py` one after the other in 2 different terminals
+ 5. Run `app.py`
 
 ## What's next
 
